@@ -1,0 +1,39 @@
+<form [formGroup]="cep">
+  <section class="bloco">
+    <div class="container">
+      <div class="alinhamento">
+        <label for="exampleFormControlInput1" class="form-label">CEP</label>
+        <label style="color: red;    margin-left: 10rem;">
+          {{resp}}
+        </label>
+        <input type="text" pattern="[0-9]*" maxlength="8" formControlName="cep" class="form-control" id="btnCep" placeholder="CEP"> 
+        <button (click)="getcep()" type="button" class="btn btn-secondary btn-sm forma">Pesquisar</button>
+        
+      </div>
+      <div class="">
+
+        <label for="exampleFormControlInput1" class="form-label dis">Endereço</label>
+        <input type="text" class="form-control" formControlName="endereço" id="btnEnd">
+
+        
+      </div>
+      <div class="sep">
+        <label for="exampleFormControlInput1" class="form-label dis">Tipo do endereço</label>
+        <input type="text" class="form-control" formControlName="complemento" id="btnCom">
+
+        <label for="exampleFormControlInput1" class="form-label">Estado</label>
+        <input type="text" class="form-control" style="margin-left:2rem" formControlName="estado" id="btnEst">
+
+        <label for="exampleFormControlInput1" class="form-label">DDD</label>
+        <input type="text" class="form-control" formControlName="numero" id="btnNum">
+      </div>
+      <div class="sep">
+        <label for="exampleFormControlInput1" class="form-label dis">Bairro</label>
+        <input type="text" class="form-control" formControlName="bairro" id="btnBai">
+
+        <label for="exampleFormControlInput1" class="form-label">Cidade</label>
+        <input type="text" class="form-control" style="margin-left:2rem" formControlName="cidade" id="btnCid">
+      </div>
+    </div>
+  </section>
+</form>
